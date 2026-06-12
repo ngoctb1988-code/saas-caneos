@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
-export const metadata = { title: "Đăng nhập" };
 export default function LoginPage() {
   const router = useRouter();
   const [email,setEmail]=React.useState("");
