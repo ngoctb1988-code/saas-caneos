@@ -33,8 +33,8 @@ export function CashflowBars({data}:{data:{date:string;inflow:number;outflow:num
       <XAxis dataKey="date" tickFormatter={fmtShort} tick={{fontSize:11,fill:AXIS}} tickLine={false} axisLine={false} minTickGap={20}/>
       <YAxis tickFormatter={compact} tick={{fontSize:11,fill:AXIS}} tickLine={false} axisLine={false} width={44}/>
       <Tooltip content={<Tip/>}/>
-      <Bar dataKey="inflow" name="Tiền vào" fill={PRI} radius={[4,4,0,0]} maxBarThickness={32}/>
-      <Bar dataKey="outflow" name="Tiền ra" fill={RED} fillOpacity={0.7} radius={[4,4,0,0]} maxBarThickness={32}/>
+      <Bar dataKey="inflow" name="Tiền vào" fill={PRI} radius={[4,4,0,0]} maxBarSize={32}/>
+      <Bar dataKey="outflow" name="Tiền ra" fill={RED} fillOpacity={0.7} radius={[4,4,0,0]} maxBarSize={32}/>
     </BarChart>
   </ResponsiveContainer>;
 }
