@@ -7,6 +7,7 @@ import { createClient } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+export const dynamic = "force-dynamic";
 
 const SEED_CATS = [
   { name: "Nước mía", sort_order: 1, items: [
