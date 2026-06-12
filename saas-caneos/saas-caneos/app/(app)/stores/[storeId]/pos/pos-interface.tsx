@@ -3,7 +3,7 @@ import * as React from "react";
 import { ShoppingCart, Plus, Minus, X, Check, Banknote, CreditCard, StickyNote, Trash2 } from "lucide-react";
 import { toast } from "sonner";
 import type { Product, Category, PaymentMethod } from "@/lib/types";
-import { VND, NUM, PAYMENT_LABELS } from "@/lib/types";
+import { PAYMENT_LABELS } from "@/lib/types";
 import { VND as fmtVND, NUM as fmtNUM } from "@/lib/format";
 import { checkoutOrder } from "./actions";
 import { Button } from "@/components/ui/button";
