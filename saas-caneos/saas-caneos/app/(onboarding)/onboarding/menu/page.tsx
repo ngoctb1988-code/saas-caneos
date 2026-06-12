@@ -7,7 +7,6 @@ import { createClient } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-export const dynamic = "force-dynamic";
 
 const SEED_CATS = [
   { name: "Nước mía", sort_order: 1, items: [
@@ -24,7 +23,7 @@ const SEED_CATS = [
   ]},
 ];
 
-export default function SeedMenuPage() {
+function SeedMenuContent() {
   const router = useRouter();
   const params = useSearchParams();
   const storeId = params.get("storeId");
@@ -83,5 +82,14 @@ export default function SeedMenuPage() {
         }
       </div>
     </main>
+  );
+}
+
+// Đây là "lớp vỏ bảo vệ" Suspense được bọc bên ngoài
+export default function SeedMenuPage() {
+  return (
+    <React.Suspense fallback={<div className="grid min-h-dvh place-items-center">Đang tải cấu hình...</div>}>
+      <SeedMenuContent />
+    </React.Suspense>
   );
 }
