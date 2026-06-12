@@ -37,7 +37,7 @@ export default async function StoresPage() {
         </div>
         <div className="grid gap-3 sm:grid-cols-2">
           {stores.map(store => {
-            const sum = summaryMap.get(store.id);
+            const sum = summaryMap instanceof Map ? summaryMap.get(store.id) : undefined;
             return (
               <Link key={store.id} href={`/stores/${store.id}`}>
                 <Card className="p-5 transition-shadow hover:shadow-md cursor-pointer">
