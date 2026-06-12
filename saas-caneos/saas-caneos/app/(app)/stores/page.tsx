@@ -44,7 +44,7 @@ export default async function StoresPage() {
                   <div className="mb-3 flex items-start justify-between">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary text-xl">🥤</div>
                     <Badge variant={store.role === "owner" ? "default" : store.role === "manager" ? "secondary" : "muted"}>
-                      {ROLE_LABELS[store.role]}
+                      {ROLE_LABELS[store.role as keyof typeof ROLE_LABELS]}
                     </Badge>
                   </div>
                   <p className="font-semibold">{store.name}</p>
